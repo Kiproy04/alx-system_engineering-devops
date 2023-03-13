@@ -1,2 +1,2 @@
 #!/bin/bash
-lp "Hello World" > /n 
+$printf "Hello World" > /n 
