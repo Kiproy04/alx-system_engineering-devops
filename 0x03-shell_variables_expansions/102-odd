@@ -1,9 +1,2 @@
 #!/bin/bash
-readarray -t lines
-for i in "${!lines[@]}"
-do
-  if (( i % 2 == 0 ))
-  then
-    echo "${lines[i]}"
-  fi
-done
+printf '%s\n' "$line"
