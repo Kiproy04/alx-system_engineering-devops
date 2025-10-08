@@ -1,2 +1,10 @@
 #!/bin/bash
-awk 'NR % 2 == 1'
+readarray -t lines
+for i in "${!lines[@]}"
+do
+  if (( i % 2 == 0 ))
+  then
+    echo "${lines[i]}"
+  fi
+done
+
