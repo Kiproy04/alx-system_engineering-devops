@@ -1,3 +1,2 @@
 #!/bin/bash
 i=1; while IFS= read -r line; do if (( i % 2 == 1 )); then echo "$line"; fi; ((i++)); done
-
