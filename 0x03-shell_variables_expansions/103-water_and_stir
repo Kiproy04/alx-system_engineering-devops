@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(echo $(( $(echo $WATER | tr 'water' '01234') + $(echo $STIR | tr 'stir.' '01234') )) | tr '0123456789' 'bestcholhc')
+python3 -c "print((lambda w,s:(lambda n:n.translate(str.maketrans('01234567','bestchol')))(format(int(w.translate(str.maketrans('water','01234')),5)+int(s.translate(str.maketrans('stir.','01234')),5),'o')))(\"$WATER\",\"$STIR\"))"
