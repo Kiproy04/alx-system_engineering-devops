@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -c "import sys;exec('for i,l in enumerate(sys.stdin):\\n if i%2==0: print(l,end=\"\")')"
+python3 -c "for i,l in enumerate(__import__('sys').stdin):print(l,end='') if i%2==0 else None"
