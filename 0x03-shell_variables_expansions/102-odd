@@ -1,2 +1,2 @@
 #!/bin/bash
-nl -ba | grep -E '^ *[0-9]*1\t'
+i=1 | while read line | do [ $((i%2)) -eq 1 ] then printf '%s\n' "$line" i=$((i+1)) | done
