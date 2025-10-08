@@ -1,2 +1,2 @@
 #!/bin/bash
-printf '%s\n' "$line"
+nl -ba | grep -E '^ *[0-9]*1\t'
