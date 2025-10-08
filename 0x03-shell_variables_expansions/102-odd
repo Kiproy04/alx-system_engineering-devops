@@ -1,10 +1,3 @@
 #!/bin/bash
-readarray -t lines
-for i in "${!lines[@]}"
-do
-  if (( i % 2 == 0 ))
-  then
-    echo "${lines[i]}"
-  fi
-done
+i=1; while IFS= read -r line; do if (( i % 2 == 1 )); then echo "$line"; fi; ((i++)); done
 
