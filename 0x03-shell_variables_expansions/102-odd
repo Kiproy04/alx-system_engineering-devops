@@ -1,2 +1,2 @@
 #!/bin/bash
-i=1 | while read line | do [ $((i%2)) -eq 1 ] then printf '%s\n' "$line" i=$((i+1)) | done
+python3 -c "import sys;exec('for i,l in enumerate(sys.stdin):\\n if i%2==0: print(l,end=\"\")')"
